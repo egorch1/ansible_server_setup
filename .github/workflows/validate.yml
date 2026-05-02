@@ -1,0 +1,26 @@
+name: Validate Ansible Playbook
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Install Ansible
+        run: |
+          sudo apt update
+          sudo apt install -y ansible
+      
+      - name: Check syntax
+        run: ansible-playbook setup.yml --syntax-check
+      
+      - name: List tasks
+        run: ansible-playbook setup.yml --list-tasks
