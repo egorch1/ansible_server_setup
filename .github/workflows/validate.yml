@@ -20,7 +20,7 @@ jobs:
           sudo apt install -y ansible
       
       - name: Check syntax
-        run: ansible-playbook setup.yml --syntax-check
+        run: ansible-playbook setup.yaml --syntax-check
       
       - name: List tasks
-        run: ansible-playbook setup.yml --list-tasks
+        run: ansible-playbook setup.yaml --list-tasks
