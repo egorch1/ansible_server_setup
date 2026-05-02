@@ -1,0 +1,11 @@
+---
+# Базовые пакеты для установки
+base_packages:
+  - vim
+  - htop
+  - curl
+  - wget
+  - git
+  - net-tools
+  - fail2ban
+  - ufw

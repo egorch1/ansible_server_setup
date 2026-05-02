@@ -1,0 +1,17 @@
+# реальные адреса серверов
+inventory.yaml
+inventory.ini
+
+# SSH ключи
+*.pem
+id_rsa
+id_rsa.pub
+
+# Временные файлы Ansible
+*.retry
+.ansible/
+
+# Файлы редактора
+.vscode/
+.idea/
+.DS_Store
